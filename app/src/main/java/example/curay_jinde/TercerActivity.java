@@ -27,15 +27,20 @@ public class TercerActivity extends AppCompatActivity {
         apellido= findViewById(R.id.resutul_apellido);
 
         base = findViewById(R.id.resutul_base);
-        exponente = findViewById(R.id.resutul_exponete);
+        exponente = findViewById(R.id.resutul_exponet);
+        numero = findViewById(R.id.resutul_numero);
 
 
 
 
 
-        Bundle datosExtras = getIntent().getExtras();
-        String nombrePersona = datosExtras.getString("nombre");
+       /* Bundle datosExtras = getIntent().getExtras();
+        String nombreP = datosExtras.getString("nombre");
+        String baseP = datosExtras.getString("base");
 
+        nombre.setText(nombreP);
+        base.setText(baseP);
+*/
     }
     public  void  onClickSiguente(View view)
     {

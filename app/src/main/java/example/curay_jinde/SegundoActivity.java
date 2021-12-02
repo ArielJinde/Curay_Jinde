@@ -20,7 +20,7 @@ public class SegundoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segundo);
-        btn_siguiente = findViewById(R.id.button_siguiente);
+        btn_siguiente = findViewById(R.id.button_siguiente2);
         btn_cerrar = findViewById(R.id.button_cerrar);
         editText_nombre= findViewById(R.id.ingresar_nombre);
         editText_base= findViewById(R.id.ingresar_base);
@@ -35,16 +35,15 @@ public class SegundoActivity extends AppCompatActivity {
         String nombre = editText_nombre.getText().toString();
         String base = editText_base.getText().toString().trim();
 
-        if (!nombre.matches("") && !base.matches("")) {
+
 
             Intent intent = new Intent(this, TercerActivity.class);
             this.startActivity(intent);
-            intent.putExtra("nombre", nombre.toLowerCase(Locale.ROOT));
+           /* intent.putExtra("nombre", nombre.toLowerCase(Locale.ROOT));
             intent.putExtra("base", base);
-            btn_cerrar.setEnabled(true);
-        }else {
-            Toast.makeText(this, "Nombre y base son necesarios",Toast.LENGTH_LONG).show();
-        }
+            Toast.makeText(this, nombre,Toast.LENGTH_LONG).show();
+            //btn_cerrar.setEnabled(true);
+*/
 
 
     }
