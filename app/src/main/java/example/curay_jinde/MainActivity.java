@@ -8,12 +8,14 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 Button  btn_siguiente;
+Button btn_mostrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn_siguiente = findViewById(R.id.button_siguiente);
-
+       btn_mostrar = findViewById(R.id.button_Resultado);
+        btn_mostrar.setEnabled(false);  //Asigna valor true.
 
     }
 

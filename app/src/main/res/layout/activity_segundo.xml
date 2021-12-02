@@ -105,6 +105,7 @@
         android:elevation="@dimen/elevation"
         android:gravity="center"
 
+        android:onClick="onClickCerrar"
         android:padding="12dp"
         android:paddingBottom="@dimen/textView_Padding"
         android:text="Cerrar"
