@@ -35,15 +35,19 @@ public class SegundoActivity extends AppCompatActivity {
         String nombre = editText_nombre.getText().toString();
         String base = editText_base.getText().toString().trim();
 
-
+        if (!nombre.matches("") && !base.matches("")) {
 
             Intent intent = new Intent(this, TercerActivity.class);
-            this.startActivity(intent);
-           /* intent.putExtra("nombre", nombre.toLowerCase(Locale.ROOT));
+
+            intent.putExtra("nombre", nombre.toUpperCase(Locale.ROOT));
             intent.putExtra("base", base);
             Toast.makeText(this, nombre,Toast.LENGTH_LONG).show();
-            //btn_cerrar.setEnabled(true);
-*/
+            btn_cerrar.setEnabled(true);
+
+            this.startActivity(intent);
+        }else {
+            Toast.makeText(this, "Nombre y base son necesarios",Toast.LENGTH_LONG).show();
+        }
 
 
     }

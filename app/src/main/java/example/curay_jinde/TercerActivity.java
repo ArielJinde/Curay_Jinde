@@ -34,17 +34,17 @@ public class TercerActivity extends AppCompatActivity {
 
 
 
-       /* Bundle datosExtras = getIntent().getExtras();
+        Bundle datosExtras = getIntent().getExtras();
         String nombreP = datosExtras.getString("nombre");
         String baseP = datosExtras.getString("base");
 
         nombre.setText(nombreP);
         base.setText(baseP);
-*/
+
     }
-    public  void  onClickSiguente(View view)
+    public  void  onClickCerrar(View view)
     {
         Intent intent = new Intent(this,SegundoActivity.class);
-        this.startActivity(intent);
+        finish();
     }
 }
