@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -31,17 +32,19 @@ public class SegundoActivity extends AppCompatActivity {
 
     public  void  onClickSiguente(View view)
     {
-        String nombre = editTextNombre.getText().toString();
-        String apellido = editTextApellido.getText().toString();
+        String nombre = editText_nombre.getText().toString();
+        String base = editText_base.getText().toString().trim();
 
-        if (!nombre.matches("") && !apellido.matches(""))
-        {
+        if (!nombre.matches("") && !base.matches("")) {
 
-        Intent intent = new Intent(this,TercerActivity.class);
-        this.startActivity(intent);
-        intent.putExtra("nombre",editText_nombre.getText().toString().toLowerCase(Locale.ROOT));
-        intent.putExtra("base",editText_base.getText().toString().trim());
-
+            Intent intent = new Intent(this, TercerActivity.class);
+            this.startActivity(intent);
+            intent.putExtra("nombre", nombre.toLowerCase(Locale.ROOT));
+            intent.putExtra("base", base);
+            btn_cerrar.setEnabled(true);
+        }else {
+            Toast.makeText(this, "Nombre y base son necesarios",Toast.LENGTH_LONG).show();
+        }
 
 
     }
